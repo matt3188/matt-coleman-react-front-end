@@ -3,7 +3,7 @@ import DataStore from 'flux/stores/DataStore';
 
 class About extends React.Component {
   render() {
-    let pageData = DataStore.getPageBySlug('sample-page');
+    let pageData = DataStore.getPageBySlug('about');
 
     return (
       <div>
