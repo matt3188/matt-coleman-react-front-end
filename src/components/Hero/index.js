@@ -6,7 +6,7 @@ const Hero = props => (
     <h1>{props.name}</h1>
     <p>{props.strapline}</p>
     <p>
-      {props.description}.
+      {props.description}{' '}
       <a href={props.employer_website}>{props.current_employer}</a>.{' '}
       {props.current_job_role}
     </p>
