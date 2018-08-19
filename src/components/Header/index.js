@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import DataStore from 'flux/stores/DataStore';
 
+import './Header.css';
+import Image from 'images/code.jpg';
+
 class Header extends React.Component {
   render() {
     // Sort pages by order
@@ -33,6 +36,11 @@ class Header extends React.Component {
           }
           return false;
         })}
+
+        <div
+          className="header-bg"
+          style={{ backgroundImage: `url(${Image})` }}
+        />
       </div>
     );
   }

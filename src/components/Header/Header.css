@@ -1,0 +1,13 @@
+.header-bg {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 500px;
+  position: absolute;
+  background-size: cover;
+  background-color: #242832;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}

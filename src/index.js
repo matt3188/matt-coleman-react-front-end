@@ -7,7 +7,8 @@ import 'index.css';
 import Home from 'containers/Home';
 import About from 'components/About.js';
 import Contact from 'components/Contact.js';
-import Header from 'components/Header.js';
+import Header from 'components/Header';
+import Navigation from 'components/Navigation';
 
 import {
   BrowserRouter as Router,
@@ -22,19 +23,6 @@ class App {
     contact: Contact
   };
 
-  buildRoutes(data) {
-    return data.pages.map((page, i) => {
-      return (
-        <Route
-          key={i}
-          component={this.templates[page.slug]}
-          path={`/${page.slug}`}
-          exact
-        />
-      );
-    });
-  }
-
   run() {
     DataActions.getPages(response => {
       render(
@@ -44,7 +32,8 @@ class App {
             <Switch>
               <Route path="/" component={Home} exact />
 
-              {this.buildRoutes(response)}
+              <Navigation response={response} />
+
               <Route
                 render={() => {
                   return <Redirect to="/" />;
