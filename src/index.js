@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import DataActions from 'flux/actions/DataActions.js';
 
-import 'index.css';
+import './styles/index.scss';
 
 import Header from 'components/Header';
 import Routes from 'routes';
