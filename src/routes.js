@@ -2,8 +2,8 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Home from 'containers/Home';
-import About from 'components/About.js';
-import Contact from 'components/Contact.js';
+import About from 'containers/About';
+import Contact from 'containers/Contact';
 
 class Routes extends React.Component {
   templates = {
