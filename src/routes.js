@@ -12,9 +12,9 @@ class Routes extends React.Component {
   };
 
   buildRoutes() {
-    return this.props.response.pages.map((page, i) => (
+    return this.props.response.pages.map(page => (
       <Route
-        key={i}
+        key={page.id}
         component={this.templates[page.slug]}
         path={`/${page.slug}`}
         exact
