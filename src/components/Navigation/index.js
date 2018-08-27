@@ -18,10 +18,6 @@ class Navigation extends React.Component {
 
     return (
       <nav className="navigation">
-        <Link to="/" style={{ marginRight: '10px' }}>
-          Home
-        </Link>
-
         {allPages.map(page => {
           if (page.slug !== 'home') {
             return (

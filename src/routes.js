@@ -3,11 +3,15 @@ import { Route } from 'react-router-dom';
 
 import Home from 'containers/Home';
 import About from 'containers/About';
+import Experience from 'containers/Experience';
+import Work from 'containers/Work';
 import Contact from 'containers/Contact';
 
 class Routes extends React.Component {
   templates = {
     about: About,
+    experience: Experience,
+    work: Work,
     contact: Contact
   };
 
