@@ -20,6 +20,7 @@ class Routes extends React.Component {
       <Route
         key={page.id}
         component={this.templates[page.slug]}
+        data={{ ...page }}
         path={`/${page.slug}`}
         exact
       />

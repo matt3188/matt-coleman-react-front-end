@@ -7,11 +7,21 @@ import DataStore from 'flux/stores/DataStore';
 import './Navigation.css';
 
 class Navigation extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isActive: this.props.isActive
+    };
+  }
+
+  closeNav() {
+    this.setState({ isActive: !this.state.isActive });
+  }
   render() {
     // Sort pages by order
     let allPages = DataStore.getAllPages();
     allPages = _.sortBy(allPages, [
-      function(page) {
+      page => {
         return page.menu_order;
       }
     ]);
@@ -23,6 +33,7 @@ class Navigation extends React.Component {
             return (
               <Link
                 key={page.id}
+                onClick={this.closeNav}
                 to={`/${page.slug}`}
                 style={{ marginRight: '10px' }}
               >

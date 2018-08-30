@@ -26,7 +26,7 @@ class Header extends React.Component {
         >
           Open
         </button>
-        {this.state.isActive && <Navigation />}
+        {this.state.isActive && <Navigation isActive={this.state.isActive} />}
         <div
           className="header-bg"
           style={{ backgroundImage: `url(${Image})` }}

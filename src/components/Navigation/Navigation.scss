@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: greenyellow;
+  background-color: coral;
   text-align: center;
   z-index: 1;
   display: flex;
@@ -13,10 +13,17 @@
   a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 0;
     position: relative;
     width: 100%;
-    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(coral, 10);
+    }
   }
 }
